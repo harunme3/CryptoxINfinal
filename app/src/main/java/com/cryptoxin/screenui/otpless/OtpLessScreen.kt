@@ -1,58 +1,41 @@
 package com.cryptoxin.screenui.otpless
 
-import android.view.LayoutInflater
+import android.net.Uri
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Button
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.viewinterop.AndroidView
-import androidx.compose.ui.viewinterop.AndroidViewBinding
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.cryptoxin.R
-import com.cryptoxin.databinding.ActivityGraphBinding
 
 
 @Composable
 fun OtpLessScreen(navController: NavController){
-Column(modifier = Modifier.fillMaxSize(),
-    horizontalAlignment = Alignment.CenterHorizontally,
-    verticalArrangement = Arrangement.Center
-) {
-Text(text = "few")
-//    AndroidView(
-//        factory = { context ->
-//            val view = LayoutInflater.from(context).inflate(R.layout.otp_less, null, false)
-//            val button =view.findViewById<View>(R.id.whatsapp_login) as WhatsappLoginButton
-//            button.setResultCallback { data: OtplessResponse ->
-//                Log.e("1111",data.toString())
-//                val waid = data.waId
-//
-//            }
-//            view // return the view
-//        },
-//        update = { view ->
-//            // Update the view
-//        }
-//    )
+//    val context = LocalContext.current
+//    val state = rememberWebViewState("https://example.com")
+ //   val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse("https://gauge.authlink.me")) }
+   val uriHandler = LocalUriHandler.current
+    Column(modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Button(onClick = {
+            Log.e("1111","clicked")
+         uriHandler.openUri(Uri.parse("https://gauge.authlink.me").toString())
 
-    AndroidView(
-        factory = { context ->
-            val view = LayoutInflater.from(context).inflate(R.layout.activity_graph, null, false)
-
-            view // return the view
-        },
-        update = { view ->
-            // Update the view
+        }) {
+            Text(text = "Continue to Whatsapp", modifier = Modifier.padding(vertical = 24.dp, horizontal = 12.dp))
         }
-    )
-
-//    AndroidViewBinding(ActivityGraphBinding::inflate){
-//
-//    }
+    }
 
 
-}
   }
