@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "424734990084",
+    "project_id": "cryptoxin-b8f64",
+    "storage_bucket": "cryptoxin-b8f64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424734990084:android:5f67bbf46d5489309eba51",
+        "android_client_info": {
+          "package_name": "com.cryptoxin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424734990084-ir6dpmlpq2hqda3jjvaome1r3mg504qo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4ZTBnpB7poQwsepuOfS0nKRku5ufsO_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424734990084-ir6dpmlpq2hqda3jjvaome1r3mg504qo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

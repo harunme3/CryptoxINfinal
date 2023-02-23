@@ -1,0 +1,8 @@
+package com.cryptoxin.data.models.commentrewardm
+
+data class Data(
+    val amt: String,
+    val chaild: String,
+    val timestamp: String,
+    val username: String
+)
